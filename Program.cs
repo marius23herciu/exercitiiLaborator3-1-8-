@@ -9,9 +9,9 @@ namespace exercitiiLaborator3_1_8_
             //Ex1();
             //Ex2();
             //Ex3();
-            Ex4();
+            //Ex4();
             //Ex5();
-            //Ex6();
+            Ex6();
             //Ex7();
             //Ex8();
         }
@@ -85,12 +85,13 @@ namespace exercitiiLaborator3_1_8_
             //determine suma lor.
 
             Console.WriteLine("Introduceti numere diferite de 0. Introduceti 0 cand vreti sa va opriti. ");
-            
+
             int suma;
             int numar = int.Parse(Console.ReadLine());
             suma = numar;
 
-            while (numar != 0) { 
+            while (numar != 0)
+            {
                 numar = int.Parse(Console.ReadLine());
                 suma += numar;
             }
@@ -105,7 +106,7 @@ namespace exercitiiLaborator3_1_8_
 
 
             Console.WriteLine("Introduceti numere. Cand introduceti două numere consecutive egale, se va calcula suma.");
-            
+
             int suma;
             int penultimulNumar;
 
@@ -115,7 +116,8 @@ namespace exercitiiLaborator3_1_8_
             numar = int.Parse(Console.ReadLine());
             suma += numar;
 
-            while (numar != penultimulNumar) { 
+            while (numar != penultimulNumar)
+            {
                 penultimulNumar = numar;
                 numar = int.Parse(Console.ReadLine());
                 suma += numar;
@@ -128,6 +130,36 @@ namespace exercitiiLaborator3_1_8_
             //Ex6 Scrieti un program care va determina daca un numar n este sau numar
             //prim, n fiind citit de la tastatura. Daca este numar prim, va afisa “prim”. In
             //caz contrar va afisa numarul cu care este divizibil
+
+            Console.WriteLine("Introduceti un numar:");
+            int numar = int.Parse(Console.ReadLine());
+            var radacinaPatrata = (int)Math.Floor(Math.Sqrt(numar));
+
+            if (numar <= 1)
+            {
+                Console.WriteLine("Introduceti numere mai mari decat 1.");
+                return;
+            }
+            if (numar % 2 == 0)
+            {
+                Console.WriteLine(numar + " estedivizibil cu  " + radacinaPatrata);
+                return;
+            }
+
+            for (int i = 3; i <= radacinaPatrata; i += 2)
+            {
+                if (numar % i == 0)
+                {
+                    Console.WriteLine(numar + " este divizibil cu  " + radacinaPatrata);
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("prim");
+                    return;
+                }
+            }
+            Console.WriteLine("prim");
         }
     }
 }
