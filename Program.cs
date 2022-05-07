@@ -90,8 +90,7 @@ namespace exercitiiLaborator3_1_8_
             int numar = int.Parse(Console.ReadLine());
             suma = numar;
 
-            while (numar != 0)
-            {
+            while (numar != 0) { 
                 numar = int.Parse(Console.ReadLine());
                 suma += numar;
             }
@@ -116,8 +115,7 @@ namespace exercitiiLaborator3_1_8_
             numar = int.Parse(Console.ReadLine());
             suma += numar;
 
-            while (numar != penultimulNumar)
-            {
+            while (numar != penultimulNumar) { 
                 penultimulNumar = numar;
                 numar = int.Parse(Console.ReadLine());
                 suma += numar;
