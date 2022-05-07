@@ -9,8 +9,8 @@ namespace exercitiiLaborator3_1_8_
             //Ex1();
             //Ex2();
             //Ex3();
-            //Ex4();
-            Ex5();
+            Ex4();
+            //Ex5();
             //Ex6();
             //Ex7();
             //Ex8();
@@ -86,7 +86,7 @@ namespace exercitiiLaborator3_1_8_
 
             Console.WriteLine("Introduceti numere diferite de 0. Introduceti 0 cand vreti sa va opriti. ");
             
-            int suma = 0;
+            int suma;
             int numar = int.Parse(Console.ReadLine());
             suma = numar;
 
@@ -106,7 +106,7 @@ namespace exercitiiLaborator3_1_8_
 
             Console.WriteLine("Introduceti numere. Cand introduceti două numere consecutive egale, se va calcula suma.");
             
-            int suma = 0;
+            int suma;
             int penultimulNumar;
 
             int numar = int.Parse(Console.ReadLine());
