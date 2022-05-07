@@ -10,8 +10,8 @@ namespace exercitiiLaborator3_1_8_
             //Ex2();
             //Ex3();
             //Ex4();
-            //Ex5();
-            Ex6();
+            Ex5();
+            //Ex6();
             //Ex7();
             //Ex8();
         }
@@ -85,20 +85,15 @@ namespace exercitiiLaborator3_1_8_
             //determine suma lor.
 
             Console.WriteLine("Introduceti numere diferite de 0. Introduceti 0 cand vreti sa va opriti. ");
-            int[] numere = new int[50];
-            int counter = 0;
-            numere[counter] = int.Parse(Console.ReadLine());
-            counter++;
-            while (numere[counter-1] != 0)
-            {
-                numere[counter] = int.Parse(Console.ReadLine());
-                counter++;
-            }
-
+            
             int suma = 0;
-            for (int i = 0; i < counter; i++)
+            int numar = int.Parse(Console.ReadLine());
+            suma = numar;
+
+            while (numar != 0)
             {
-                suma += numere[i];
+                numar = int.Parse(Console.ReadLine());
+                suma += numar;
             }
 
             Console.WriteLine("Suma numerelor introduse este " + suma);
@@ -109,23 +104,23 @@ namespace exercitiiLaborator3_1_8_
             //Ex5 Se citesc numere de la tastatură până când se introduc două numere
             //consecutive egale. Să se determine suma tuturor numerelor citite
 
-            Console.WriteLine("Introduceti numere. Cand introduceti două numere consecutive egale, se va calcula suma.");
-            int[] numere = new int[50];
-            int counter = 0;
-            numere[counter] = int.Parse(Console.ReadLine());
-            counter++;
-            numere[counter] = int.Parse(Console.ReadLine());
-            counter++;
-            while (numere[counter - 1] != numere[counter-2])
-            {
-                numere[counter] = int.Parse(Console.ReadLine());
-                counter++;
-            }
 
+            Console.WriteLine("Introduceti numere. Cand introduceti două numere consecutive egale, se va calcula suma.");
+            
             int suma = 0;
-            for (int i = 0; i < counter; i++)
+            int penultimulNumar;
+
+            int numar = int.Parse(Console.ReadLine());
+            suma = numar;
+            penultimulNumar = numar;
+            numar = int.Parse(Console.ReadLine());
+            suma += numar;
+
+            while (numar != penultimulNumar)
             {
-                suma += numere[i];
+                penultimulNumar = numar;
+                numar = int.Parse(Console.ReadLine());
+                suma += numar;
             }
 
             Console.WriteLine("Suma numerelor introduse este " + suma);
