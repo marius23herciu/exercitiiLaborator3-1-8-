@@ -11,8 +11,8 @@ namespace exercitiiLaborator3_1_8_
             //Ex3();
             //Ex4();
             //Ex5();
-            Ex6();
-            //Ex7();
+            //Ex6();
+            Ex7();
             //Ex8();
         }
         static void Ex1()
@@ -160,6 +160,48 @@ namespace exercitiiLaborator3_1_8_
                 }
             }
             Console.WriteLine("prim");
+        }
+        static void Ex7()
+        {
+            //Se citesc doua numere de la tastatura. Scrieti un program care va
+            //calcula cel mai mare divizor comun al numerelor
+
+            Console.WriteLine("Introduceti 2 numere:");
+            int a = int.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
+            int divizor;
+
+            if (a == b)
+            {
+                divizor = a;
+                Console.WriteLine("Cel mai mare divizor comun este " + divizor);
+            }
+            else if (a > b)
+            {
+                divizor = b;
+                for (int i = 0; i < b; i++)
+                {
+                    if (a % divizor == 0 && b % divizor == 0)
+                    {
+                        Console.WriteLine("Cel mai mare divizor comun este " + divizor);
+                        return;
+                    }
+                    divizor--;
+                }
+            }
+            else
+            {
+                divizor = a;
+                for (int i = 0; i < a; i++)
+                {
+                    if (a % divizor == 0 && b % divizor == 0)
+                    {
+                        Console.WriteLine("Cel mai mare divizor comun este " + divizor);
+                        return;
+                    }
+                    divizor--;
+                }
+            }
         }
     }
 }
